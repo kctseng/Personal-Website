@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <link href="css/inf133.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Real Time Web</title>
+
+
+</head>
+
+<body class="container">
+    <a href="index.html" class="btn btn-warning" style="font-size:30px; margin-top:3%;">Back to Home Page</a>
+    <div id="backgroundBox">
+        <br/>
+        <center><h1 style="margin-top:5%;"><b>Real Time Web</b></h1></center>
+        <p><center><h2 style="margin-left:3%; margin-right:3%;">This project contains 5 real time data sources with Geo data. In the bottom section, three of the sources will be called through JSON, XML and JSONP format. They will be used to turn into points on map by using Google Maps API.</h2></center></p>
+        <br/>
+        <br/>
+        <h1 style="margin-left:3%; margin-right:3%;"><b>Instagram:</b></h1>
+        <div class="links">
+            <a class="urlLine" href="https://api.instagram.com/v1/media/popular?client_id=333bb4cb03f94f28abb9652b66ac1fb9" target="_blank">URL 1 (Click here)</a>
+            <p><u>Description:</u> The link can return any data format (json, jsonp, xml) based on user requests. It will provide data feed to popular posts on Instagram. Location data are not always provided in Instagram posts, therefore the real time data has been filtered by if the post has location or not. The data will change rapidly in real time.</p>
+        </div>
+        <br/>
+        <h1 style="margin-left:3%; margin-right:3%;"><b>New York Times:</b></h1>
+        <div class="links">
+            <a class="urlLine" href="http://api.nytimes.com/svc/news/v3/content/all/u.s./.xml?api-key=1e7ec1d8fd79bdc68eb6b5e0c27c4d4d:4:66319234" target="_blank">URL 2 (Click here)</a>
+            <p><u>Description:</u> This data source provide recent newsfeed from New York Times US Section. It will update whenever there is a new article on NYT. The location data are provided under geo_facet in different format. Some articles will have empty geo_facet depending on the nature of the news. How detail the geo data are is also based on the news article. This data source is in xml format.</p>
+        </div>
+        <br/>
+        <h1 style="margin-left:3%; margin-right:3%;"><b>Foursquare:</b></h1>
+        <div class="links">
+            <a class="urlLine" href="https://api.foursquare.com/v2/venues/explore?near=chicago&client_id=T25LWF2P1VHO0YQADLISITPQU1YN0HZ34GRK3N4SAO5LMF34&client_secret=4BYAFSFX2U1M2FWYSIXIQI3DV1E0JN41EPTZXQIAJPAPEHI0&v=20140806&m=foursquare" target="_blank">URL 3 (Click here)</a>
+            <p><u>Description:</u> the link provides venues search around Chicago on Foursquare site. It will be updated whenever there is new event added in Chicago to the FourSquare site. This data source is in json format.</p>
+        </div>
+        <br/>
+        <h1 style="margin-left:3%; margin-right:3%;"><b>Locr:</b></h1>
+        <div class="links">
+            <a class="urlLine" href="http://www.locr.com/api/get_photos_xml.php?category=popularity&size=original&locr=true" target="_blank">URL 4 (Click here)</a>
+            <p><u>Description:</u> This link provides location for the popular pictures on Locr site. Geo info are under the latitude and longitude tag. This data source is in XML format.</p>
+        </div>
+        <br/>
+        <h1 style="margin-left:3%; margin-right:3%;"><b>TomTom:</b></h1>
+        <div class="links">
+            <a class="urlLine" href="https://api.tomtom.com/lbs/services/hdtRegions/3/json?key=eqtzf6tewvmyhwr4z92u34ra" target="_blank">URL 5 (Click here)</a>
+            <p><u>Description:</u> This link provides locations for traffic information in each country. It will be updated whenever TomTom collected different traffic data. This data source is in json format.</p>
+        </div>
+        <br/>
+        <br/>
+        <div style="margin-left:5%; margin-right: 5%">
+            <hr></hr>
+            <h1><b><center>Real Time Data Display: New York Times (XML)</center></b></h1>
+            <br/>
+            <div class="row">
+                <div class="col-md-4" style="font-size:30px;"><center><b>Article Title</b></center></div>
+                <div class="col-md-4" style="font-size:30px;"><center><b>Location</b></center></div>
+                <div class="col-md-4" style="font-size:30px;"><center><b>Published Date</b></center></div>
+            </div>
+            <br/>
+            <br/>
+            <div id="DisplayDataHere"></div>
+            <br/>
+            <br/>
+            <hr></hr>
+            <h1><b><center>Real Time Data Display: Instagram (JSONP)</center></b></h1>
+            <div class="row">
+                <div class="col-md-4" style="font-size:30px;"><center><b>Location</b></center></div>
+                <div class="col-md-4" style="font-size:30px;"><center><b>User Name</b></center></div>
+                <div class="col-md-4" style="font-size:30px;"><center><b>Image</b></center></div>
+            </div>
+            <br/>
+            <br/>
+            <div id="InstagramDisplay"></div>
+            <br/>
+            <br/>
+            <hr></hr>
+            <h1><b><center>Real Time Data Display: Foursquare (JSON)</center></b></h1>
+            <div class="row">
+                <div class="col-md-2" style="font-size:30px;"><center><b>Place</b></center></div>
+                <div class="col-md-4" style="font-size:30px;"><center><b>Address</b></center></div>
+                <div class="col-md-6" style="font-size:30px;"><center><b>Tips</b></center></div>
+            </div>
+            <br/>
+            <br/>
+            <div id="FourSquareDisplay"></div>
+            <br/>
+            <br/>
+        </div>
+        <br/>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/inf133.js" type="text/javascript"></script>
+</body>
+
+
+</html>

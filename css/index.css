@@ -1,0 +1,82 @@
+body
+{
+    background: url(http://bigbackground.com/wp-content/uploads/2013/07/cool-simple-backgrounds.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+#backgroundBox
+{
+    height: 150px;
+    width: 80%;
+    background-color: white;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    border-radius: 30px;
+}
+
+#name
+{
+    font-size: 100px;
+    font-family: fantasy;
+}
+
+.navButton
+{
+    font-size: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.box
+{
+    width: 80%;
+    height: auto;
+    margin-top: 1%;
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    min-height: 500px;
+}
+
+p
+{
+    font-size: 30px;
+    font-family: ariel;
+}
+
+#linkedInBtn
+{
+    font-size: 30px;
+    border-bottom-style: solid;
+    border-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+.BlogPostBox .AboutMeBox
+{
+    height:auto;
+    font-size: 30px;
+    
+}
+.date
+{
+    font-size: 20px;
+    color: gray;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
