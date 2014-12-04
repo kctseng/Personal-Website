@@ -8,7 +8,7 @@
 </head>
     
 <body>
-        <a href="~kctseng/index.html" class="btn btn-warning" style="font-size:30px; margin-top:3%;">Back to Home Page</a>
+        <a href="/~kctseng/index.html" class="btn btn-warning" style="font-size:30px; margin-top:3%;">Back to Home Page</a>
     <div id="backgroundBox">
         <br/>
         <center><h1 style="margin-top:5%;"><b>Real Time Web</b></h1></center>
@@ -50,7 +50,9 @@
             <hr></hr>
             <h1><b><center>Real Time Data Display: New York Times (XML)</center></b></h1>
             <br/>  
-            <h3><center>This map will display the geo data receieved from New York Times. Some places are not able to be found by Google depending on how they input position into the XML file. The center button next to each entry will center the map to that location. Clicking on the marker will have info window with article title, url to the article, and article's abstract.</center></h3>
+            <p class="justification">This map will display the geo data receieved from New York Times. This is recent news in US posted on New York Times. Some places are not able to be found by Google depending on how they input position into the XML file. The center button next to each entry will center the map to that location. <b>Clicking</b> on the marker will have info window with article title, url to the article, and article's abstract.</p>
+        <br/>
+        <p class="justification">In the New York Times data sourse, the locations were given in city name and/or state name. Instead of direct longitude and latitude, I had to geocode everything and make sure the center button will work to the right position after translate. The initial center point of the map is the center of the United States since the data source is most likely giving locations within the United States. This map will show where the news are happening all over the world and gives direct links to New York Times site after clicking on the markers on the map.</p>
         <br/>
         <br/>
             <div class="row">

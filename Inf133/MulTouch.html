@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/~kctseng/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body
+        {
+            background: url(http://bigbackground.com/wp-content/uploads/2013/07/cool-simple-backgrounds.jpg) no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        #backgroundBox
+        {
+            height: auto;
+            width: auto;
+            background-color: white;
+            margin-top: 2%;
+            margin-bottom: 1%;
+            border-radius: 30px;
+        }
+        #GroupDesc
+        {
+            margin-right: 5%;
+            margin-left: 10%;
+            margin-top: 2%;
+        }
+        .memberName
+        {
+            margin-left: 5%;
+            
+        }
+        .MemberDesc
+        {
+            margin-left: 8%;
+            font-size: 30px;
+        }
+        .videoWrapper 
+        {
+	       position: relative;
+	       padding-bottom: 56.25%; /* 16:9 */
+	       padding-top: 25px;
+	       height: 0;
+        }
+        .videoWrapper iframe {
+	       position: absolute;
+	       top: 0;
+	       left: 5%;
+	       width: 90%;
+	       height: 90%;
+        }
+        .content
+        {
+            font-size: 30px;
+            margin-left: 5%;
+            margin-right: 5%;
+            text-indent: 80px;
+        }
+    </style>
+    <title>MultiTouch Paint</title>
+</head>
+    
+<body class="container">
+    <a href="/~kctseng/index.html" class="btn btn-warning" style="font-size:30px; margin-top:3%;">Back to Home Page</a>
+    <div id="backgroundBox">
+        <br/>
+        <center><p style="margin-top:2%; font-size:50px;"><b>MultiTouch Paint</b></p></center>
+        <p style="margin-left:5%; font-size:40px;"><b><u>Video</u></b></p>
+        <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <iframe width="560" height="315" src="//www.youtube.com/embed/uulMRR8JEdc" frameborder="0" allowfullscreen></iframe>        </div>
+        <p style="margin-left:5%; font-size:40px;"><b><u>Group Members</u></b></p>
+        
+        <h2 class="memberName"><b>Joseph Mehrabi</b></h2>
+            <blockquote class="MemberDesc">Joe was in charge of filming and editing the video.</blockquote>
+        <h2 class="memberName"><b>Leo Lin</b></h2>
+            <blockquote class="MemberDesc">Leo was in charge of modifying the paint program.</blockquote>
+        <h2 class="memberName"><b>Carla A. Santos</b></h2>
+            <blockquote class="MemberDesc">Carla was in charge of setting up the device and helped with filming.</blockquote>
+        <h2 class="memberName"><b>Kacey Kuanchi Tseng</b></h2>
+            <blockquote class="MemberDesc">Kacey was in charge of setting up the website for submission and the write up.</blockquote>
+        <hr/>
+        <p style="margin-left:5%; font-size:40px;"><b><u>Source Code</u></b></p>
+        <p style="margin-left:8%; margin-top:2%; font-size:30px;">This is the class we modified for this project: 
+            <a href="https://github.com/leoxy520/inf133mt/blob/master/DrawSurfaceScene.java" target="_blank"> DrawSurfaceScene.java</a></p>
+        <hr/>
+        <p style="margin-left:5%; font-size:40px;"><b><u>Description</u></b></p>
+        <p class="content">In this project, we modified the paint program. Originally, the program only works for regular drawing using one finger. We added a feature that will connect our touchpoints as vertices of a polygon and draw on the canvas when multitouch events occur. As shown in the video, we used a regular box and webcam with CCV and MT4J to complete this project. We had trouble in the beginning setting up the lighting and CCV correctly for it to produce the best quality blob, but after that, the rest project went relatively smoothly.</p>
+        <p class="content">In our initial version of the code, after we added the multi touch feature, the paint program was not drawing when we only have single finger on it. Instead it only shows a dot where the touch is perceived, but never actually <em>draws</em> when the touch is moved on the canvas. This is the version shown in the video. We fixed this issue after we filmed the video, however, when we attempted to refilm the video, the webcam was no longer working properly, so we had to settle for what you see in the video. Another problem in the original code was that the image does not stay on the canvas when we started to produce another polygon. This was also fixed in our latest version of the code where the images will stay until we deliberately erase them with the eraser. This fix, however, is not shown in the video because of the camera problem we had, so we had to settle by turning in footage of the program that you see in the video. We still managed to create a multitouch program that adhere to all of the guidelines, however, we were not able to demonstrate our improvements because of the misbehaving camera. Future classes may wish to utilize a newer or slightly more sophisticated camera for the homemade touchpad.</p>
+        <p class="content">For the process of coding, we first had to examine the drawing example in MT4J and understand how the program worked. The architecture basically includes the observer pattern we learned in class. The program listens for inputs from any input device. The input can be from the mouse, or it could come from another device like the gray-scale box that we built. Although inputs can come from different physical media, they are abstracted by the MT4J library as just abstract cursors. The program listens for cursor inputs, then according to the positions of the cursors, it draws a shape where the cursors are. Our extension to the drawing example connected all the cursors together by lines to make different kinds of shapes. In order to keep track of all the  cursors that are currently giving inputs, and we keep track of a collection of cursor types; when one cursor changes positions, the changes will be reflected in the collection. We then have the collection of cursors and thus iterate through all the cursors in the collection, drawing lines to connect all the cursors and form polygons.</p>
+        <br/>
+        <br/>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    
+</body>
+
+
+
+</html>

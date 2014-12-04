@@ -32,6 +32,7 @@ function centerTo(num) {
     geocoder.geocode({address: points[num]}, function (results, status){
        if(status == google.maps.GeocoderStatus.OK) {
            map.setCenter(results[0].geometry.location);
+           map.setZoom(7);
 
        }
         else {
