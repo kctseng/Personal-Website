@@ -1,16 +1,21 @@
 body
 {
-    background: url(http://bigbackground.com/wp-content/uploads/2013/07/cool-simple-backgrounds.jpg) no-repeat center center fixed;
+    background: url(http://www.mrwallpaper.com/wallpapers/taipei-city.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+}
+
+h1 h2 h3 h4 h5
+{
+    font-family: font-family: 'Oswald', sans-serif;
 }
 
 #backgroundBox
 {
     height: 150px;
-    width: 80%;
-    background-color: white;
-    margin-top: 2%;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    margin-top: 90px;
     margin-bottom: 1%;
     border-radius: 30px;
 }
@@ -19,6 +24,14 @@ body
 {
     font-size: 100px;
     font-family: fantasy;
+    margin-left: 2%;
+        
+}
+
+.navbar
+{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    height: 80px;
 }
 
 .navButton
@@ -26,23 +39,30 @@ body
     font-size: 30px;
     margin-left: 50px;
     margin-right: 50px;
+    height: 100%;
+}
+
+.navbar-nav li a
+{
+    line-height: 80px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .box
 {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-top: 1%;
-    background-color: white;
-    border-radius: 30px;
+    background: rgba(255,255,255,0.9);
     margin-bottom: 5%;
     min-height: 500px;
+    border-radius: 20px;
 }
 
 p
 {
     font-size: 30px;
-    font-family: ariel;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #linkedInBtn
@@ -52,7 +72,6 @@ p
     border-color: black;
     margin-top: 50px;
     margin-bottom: 50px;
-    border-radius: 20px;
 }
 
 .BlogPostBox .AboutMeBox
@@ -76,7 +95,7 @@ p
 .videoWrapper iframe {
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
 }

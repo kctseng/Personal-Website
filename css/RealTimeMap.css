@@ -1,6 +1,6 @@
 body
 {
-    background: url(http://bigbackground.com/wp-content/uploads/2013/07/cool-simple-backgrounds.jpg) no-repeat center center fixed;
+    background: url(http://www.mrwallpaper.com/wallpapers/taipei-city.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
 }
@@ -9,7 +9,7 @@ body
 {
     height: auto;
     width: auto;
-    background-color: white;
+    background: rgba(255,255,255,0.9);
     margin-top: 2%;
     margin-bottom: 1%;
     border-radius: 30px;

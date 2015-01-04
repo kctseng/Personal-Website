@@ -6,7 +6,7 @@
     <style>
         body
         {
-            background: url(http://bigbackground.com/wp-content/uploads/2013/07/cool-simple-backgrounds.jpg) no-repeat center center fixed;
+            background: url(http://www.mrwallpaper.com/wallpapers/taipei-city.jpg) no-repeat center center fixed;
             background-size: cover;
             height: 100%;
         }
@@ -14,7 +14,7 @@
         {
             height: auto;
             width: auto;
-            background-color: white;
+            background: rgba(255,255,255,0.9);
             margin-top: 2%;
             margin-bottom: 1%;
             border-radius: 30px;
@@ -86,9 +86,9 @@
             <a href="https://github.com/kctseng/Inf133AndroidProj/blob/master/app/src/main/java/com/example/kuanchi/sounds/MainActivity.java" target="_blank"> MainActivity.java</a></p>
         <hr/>
         <p style="margin-left:5%; font-size:40px;"><b><u>Description</u></b></p>
-        <p class="content">In this project, we created an Android app that will play sounds to changes in the device's orientation. We used Eclipse ADT to code the program and tested it on an actual Google Nexus 5 running Android Lollipop 5.0.</p>
+        <p class="content">In this project, we created an Android app that will play sounds to changes in the device's orientation. We used Android Studio to code the program and tested it on an actual Google Nexus 5 running Android Lollipop 5.0.</p>
         <p class="content">In the phone, there are multiple components that make the system work together. There are the sensors that feed data to the app and the app itself which performs computations based on the sensors' data. We included  the sound files that get played on each orientation change. </p>
-        <p class="content">We first selected the sounds we want to play. We then set up the user interface on the app to display relevant information such as a real time update on the sensors data and what current sound is playing. The architecture of the app is again using the observer pattern. The Android OS has an API for interfacing with underlying hardware. We set up the observer pattern such that any changes in the sensors will invoke a listener method to respond to the changes. We ultilze the Accelerometer and Magnetic Field sensors of the phone in combination to get the orientation. The SensorManager API manages all the sensors for us, we just have to query it for the data we want. Once we get all the raw data from the sensors, we have to pass it to API. For example, calling getOrientation() will interpret the data and give us the bits that are actually interesting for our purpose. When we get the orientation data from this API, we then distinguish the different orientations by playing a different sound when the phone is at a particular orientation. In order to play the sounds, we first have to import the sound files into our app and use relevant API like the MediaPlayer in the framework to play them.</p>
+        <p class="content">We first selected the sounds we want to play. We then set up the user interface on the app to display relevant information such as a real time update on the sensors data and what current sound is playing. The architecture of the app is again using the observer pattern. The Android OS has an API for interfacing with underlying hardware. We set up the observer pattern such that any changes in the sensors will invoke a listener method to respond to the changes. We ultilze the Accelerometer and Magnetic Field sensors of the phone in combination to get the orientation. The SensorManager API manages all the sensors for us, we just have to query it for the data we want. Once we get all the raw data from the sensors, we have to pass it to API. For example, calling getOrientation() will interpret the data and give us the coordinates that we need. When we get the orientation data from this API, we then distinguish the different orientations by playing a different sound when the phone is at a particular orientation. In order to play the sounds, we first have to import the sound files into our app and use relevant API like the MediaPlayer in the framework to play them.</p>
         <p class="content">After getting the basic functionality of the app to work, we decided to customize it a little. We added two sound combinations which can be switched upon pressing their respective buttons. They form songs when you give an order to the orientations that you place the device. And then we gave the app the ability to display the lyrics of each sound instead of displaying orientation data. </p>
         <br/>
         <br/>
